@@ -1,0 +1,73 @@
+  https://stackoverflow.com/questions/22491229/load-testing-and-benchmarking-with-siege-vs-wrk
+Load testing and benchmarking tools
+
+Listed in alphabetical order.
+
+ab: slow and single threaded, written in C
+
+apib: most of the features of ApacheBench (ab), also designed as a more modern replacement, written in C
+
+baloo: expressive end-to-end HTTP API testing made easy, written in Go (golang)
+
+baton: HTTP load testing, written in Go (golang)
+
+bombardier: fast crossplatform HTTP benchmarking tool, written in Go (golang)
+
+curl-loader: performance loading of various application services and traffic generation, written in C
+
+drill: HTTP load testing application inspired by Ansible syntax, written in Rust
+
+fasthttploader: benchmark (kinda ab) with autoadjustment and charts based on fasthttp library, write in Go (golang)
+
+fortio: load testing library and command line tool and web UI. Allows to specify a set query-per-second load and record latency histograms and other useful stats, write in Go (golang)
+
+gatling: high performance load testing framework based on Scala, Akka and Netty, write in Scala
+
+go-wrk: HTTP benchmarking tool based in spirit on the excellent wrk tool (wg/wrk), write in Go (golang)
+
+goad: AWS Lambda powered, highly distributed, load testing tool, write in Go (golang)
+
+gobench: HTTP/HTTPS load testing and benchmarking tool, write in Go (golang)
+
+gohttpbench: ab-like benchmark tool run on multi-core cpu, write in Go (golang)
+
+hey: HTTP(S) load generator, ApacheBench (ab) replacement, formerly known as rakyll/boom, written in Go (golang)
+
+htstress: multithreading high-load bechmarking services (>5K rps), written in C/Linux
+
+httperf: difficult configuration, slow and single threaded, written in C
+
+inundator: simple and high-throughput HTTP flood program, written in C/Linux
+
+jmeter: Apache JMeter™, pure application designed to load test performance both on static and dynamic resources, written in Java
+
+k6: modern load testing tool scriptable in ES6 JS with support for HTTP/1.1, HTTP/2.0 and WebSocket, written in Go (golang)
+
+locust: easy-to-use, distributed load testing tool with real-time web UI. Simulates a swarm of concurrent users, the behavior of each of them is defined by your python code. Written in Python
+
+mgun: modern tool for load testing HTTP servers, written in Go (golang)
+
+pounce: evented, but results fluctuate, it's sometimes faster than htstress, written in C
+
+siege: slow and single threaded, written in C
+
+slapper: simple load testing tool with real-time updated histogram of request timings, written in Go (golang)
+
+slow_cooker: load tester focused on lifecycle issues and long-running tests, service with a predictable load and concurrency level for a long period of time, written in Go (golang)
+
+sniper: powerful & high-performance http load tester, written in Go (golang)
+
+tsung: simulate stress users in order to test the scalability and performance of IP based client/server applications HTTP, WebDAV, SOAP, PostgreSQL, MySQL, LDAP and Jabber/XMPP servers, written in Erlang
+
+vegeta: HTTP load testing tool and library, written in Go (golang)
+
+weighttp: multithreaded, but slower than htstress without keepalive, written in C
+
+wrk: multithreaded, written in C/Lua
+
+wrk2: constant throughput, correct latency recording variant of wrk, written in C/Lua
+
+yandex-tank: load and performance benchmark tool, written in Python/C|C++|Asm (phantom)
+
+Descriptions are from here.
+
