@@ -7,7 +7,12 @@
         6 free online web services ex. https://geekflare.com/test-your-website-load-time/
         
         перечень https://geekflare.com/web-performance-benchmark/
-        подход к измерению https://www.mnot.net/blog/2011/05/18/http_benchmark_rules
+        
+        
+        подход к измерению 
+           https://www.mnot.net/blog/2011/05/18/http_benchmark_rules
+           https://klen.github.io/py-frameworks-bench/
+           
         
 
 -------------BEGIN CURL
@@ -76,10 +81,11 @@ https://geekflare.com/web-performance-benchmark/
 https://www.drupaleasy.com/blogs/ryanprice/2009/04/drupal-performance-testing-apache-benchmark
 https://www.datadoghq.com/blog/apachebench/
 https://digwp.com/2012/04/measure-latency-apache-bench/
-
-
-
-
+https://josh.works/apache-benchmark-test-page-behind-login
+https://blog.sedicomm.com/2018/03/22/ispolzovanie-apache-bench-dlya-testirovaniya-nagruzki-na-veb-server/
+https://www.8host.com/blog/nagruzochnoe-testirovanie-servera-s-pomoshhyu-apachebench-v-arch-linux/
+https://www.8host.com/blog/nagruzochnoe-testirovanie-servera-s-pomoshhyu-apachebench-v-ubuntu-13-10/
+https://open2web.com.ua/blog/testirovanie-nagruzki-na-sajt-apache-bench-ab.html
 -------------END AB   
    
 -------------BEGIN WRK
@@ -117,6 +123,7 @@ https://digwp.com/2012/04/measure-latency-apache-bench/
    ======================================================================================
    https://www.ukraine.com.ua/blog/seo-optimization/ot-chego-zavisit-skorost-zagruzki-sajta.html
    https://peiko.space/ru/blog/article/website-loading-tips
+   https://work.stevegrossi.com/2015/02/07/load-testing-rails-apps-with-apache-bench-siege-and-jmeter/
    
    
    
