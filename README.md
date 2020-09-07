@@ -9,3 +9,6 @@
  RUN
  <br>
  docker run -itd --name mfserver  --publish 8080:80 se/static-test
+
+ <br>
+ test site provision on https://stoic-jackson-4a8b51.netlify.app/
