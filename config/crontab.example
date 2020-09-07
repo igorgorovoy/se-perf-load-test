@@ -1,0 +1,2 @@
+*/1 * * * * curl -so /dev/null https://stoic-jackson-4a8b51.netlify.app >> /home/gorovoy/mesuring/stoic-jackson-4a8b51.netlify.app
+*/1 * * * * curl -so /dev/null https://www.webstaticsite.pp.ua >> /home/gorovoy/mesuring/www.webstaticsite.pp.ua
