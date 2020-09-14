@@ -56,3 +56,4 @@ DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION https://www.ietf.org/rfc/rfc1035
 </br>
 Timing web requests with cURL and Chrome https://medium.com/cloudflare-blog/timing-web-requests-with-curl-and-chrome-c3da5580462a by Piers Cornwell
 </br>
+What computer networks are and how to actually understand them https://www.freecodecamp.org/news/computer-networks-and-how-to-actually-understand-them-c1401908172d/
