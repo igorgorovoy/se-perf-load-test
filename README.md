@@ -1,3 +1,49 @@
+1. Были созданы два сайта с идентичным содержанием. Страница тестового сайта которая использовалась в тесте размещена по адрессу : https://github.com/igorgorovoy/se-mfs
+2. Сайты размещены на сервисах AWS Amplify (https://aws.amazon.com/amplify/) и Netlify (https://www.netlify.com/)
+
+  - master.d2a8dehuglpvfd.amplifyapp.com 
+  - stoic-jackson-4a8b51.netlify.app
+
+3. Для запуска тестов, было создано два идентичных сервера  AWS в регионах USA (Ohio) us-east-2 и Asia Pacific (Sydney) ap-southeast-2 Тип инстанса t2.micro. На серверах небыло никакой другой нагрузки, кроме тестовой утилиты. Максимально пытались приблизиться к идеальной среде измерения.
+
+   Скрипты создания серверов доступны https://github.com/igorgorovoy/se-perf-load-test/tree/master/provision/aws
+
+4. Метрики измерений хорошо описаны в статье https://medium.com/cloudflare-blog/timing-web-requests-with-curl-and-chrome-c3da5580462a
+
+    time_namelookup in this example takes a long time. To exclude DNS resolver performance from the figures, you can resolve the IP for cURL: --resolve www.zasag.mn:443:218.100.84.167. It may also be worth looking for a faster resolver :).
+   
+    time_connect is the TCP three-way handshake from the client’s perspective. It ends just after the client sends the ACK — it doesn’t include the time taken for that ACK to reach the server. It should be close to the round-trip time (RTT) to the server. In this example, RTT looks to be about 200 ms.
+    
+    time_appconnect here is TLS setup. The client is then ready to send it’s HTTP GET request.
+    
+    time_starttransfer is just before cURL reads the first byte from the network (it hasn’t actually read it yet). time_starttransfer - time_appconnect is practically the same as Time To First Byte (TTFB) from this client. This includes the round trip over the network, so you might get a better guess of how long the server spent on the request by calculating TTFB - (time_connect - time_namelookup), so in this case, the server spent only a few milliseconds responding, the rest of the time was the network.
+    
+    time_total is just after the client has sent the FIN connection tear down.
+
+
+5. Использовали два подхода к тестированию:
+
+    5.1. один запрос раз в минуту к каждому из сайтов с каждого сервера 
+         https://github.com/igorgorovoy/se-perf-load-test/blob/master/test-scripts/scenario1_t1.sh
+         https://github.com/igorgorovoy/se-perf-load-test/blob/master/test-scripts/scenario1_t2.sh
+         
+         
+    5.2  пять запросов в минуту к каждому из сайтов с каждого сервера 
+         https://github.com/igorgorovoy/se-perf-load-test/blob/master/test-scripts/scenario2_t1.sh
+         https://github.com/igorgorovoy/se-perf-load-test/blob/master/test-scripts/scenario2_t2.sh
+         
+    Результаты измерений собирались 24 часа и доступны https://github.com/igorgorovoy/se-perf-load-test/tree/master/harvester - файлы AU - это файлы с результатами собранные с австралийского сервера , US - с американского соответственно, в префиксее наименования файла указан какой тип измерения использовалсядля получения данных в данном файле.
+    
+    
+
+
+
+
+
+
+
+
+
 # se-perf-load-test
  
  BUILD
