@@ -24,6 +24,10 @@
     
     <strong>time_total</strong> is just after the client has sent the FIN connection tear down.
     
+    [![Diagrama 1](/based_on/pic1ttfb.png "Diagrama1")](https://miro.medium.com/max/1000/0*swLuPiCo5Nn1UuQ5.png)
+    [![Diagrama 2](/based_on/pic2ttfb.png "Diagrama2")](https://miro.medium.com/max/1000/0*EImyjXUWO9bFKgse.png)
+
+    
     
 
 
