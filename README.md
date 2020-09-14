@@ -42,7 +42,7 @@
          https://github.com/igorgorovoy/se-perf-load-test/blob/master/test-scripts/scenario2_t1.sh
          https://github.com/igorgorovoy/se-perf-load-test/blob/master/test-scripts/scenario2_t2.sh
          
-    Результаты измерений собирались <strong>24 часа</strong> и доступны https://github.com/igorgorovoy/se-perf-load-test/tree/master/harvester - файлы AU - это файлы с результатами собранные с австралийского сервера , US - с американского соответственно, в префиксее наименования файла указан какой тип измерения использовалсядля получения данных в данном файле.
+    Результаты измерений собирались <strong>24 часа</strong> и доступны https://github.com/igorgorovoy/se-perf-load-test/tree/master/harvester - файлы AU - это файлы с результатами собранные с австралийского сервера , US - с американского соответственно, в суффиксе наименования файла указан какой тип измерения использовалсядля получения данных в данном файле.
     
     
 
