@@ -1,3 +1,7 @@
+<strong> Методика измерения, тестирования.<.strong>
+
+
+
 1. Были созданы два сайта с идентичным содержанием. Страница тестового сайта которая использовалась в тесте размещена по адрессу : https://github.com/igorgorovoy/se-mfs
 2. Сайты размещены на сервисах AWS Amplify (https://aws.amazon.com/amplify/) и Netlify (https://www.netlify.com/)
 
@@ -10,15 +14,17 @@
 
 4. Метрики измерений хорошо описаны в статье https://medium.com/cloudflare-blog/timing-web-requests-with-curl-and-chrome-c3da5580462a
 
-    time_namelookup in this example takes a long time. To exclude DNS resolver performance from the figures, you can resolve the IP for cURL: --resolve www.zasag.mn:443:218.100.84.167. It may also be worth looking for a faster resolver :).
+    <strong>time_namelookup</strong> in this example takes a long time.
    
-    time_connect is the TCP three-way handshake from the client’s perspective. It ends just after the client sends the ACK — it doesn’t include the time taken for that ACK to reach the server. It should be close to the round-trip time (RTT) to the server. In this example, RTT looks to be about 200 ms.
+    <strong>time_connect</strong> is the TCP three-way handshake from the client’s perspective. It ends just after the client sends the ACK — it doesn’t include the time taken for that ACK to reach the server. It should be close to the round-trip time (RTT) to the server. In this example, RTT looks to be about 200 ms.
     
-    time_appconnect here is TLS setup. The client is then ready to send it’s HTTP GET request.
+    <strong>time_appconnect</strong> here is TLS setup. The client is then ready to send it’s HTTP GET request.
     
-    time_starttransfer is just before cURL reads the first byte from the network (it hasn’t actually read it yet). time_starttransfer - time_appconnect is practically the same as Time To First Byte (TTFB) from this client. This includes the round trip over the network, so you might get a better guess of how long the server spent on the request by calculating TTFB - (time_connect - time_namelookup), so in this case, the server spent only a few milliseconds responding, the rest of the time was the network.
+    <strong>time_starttransfer</strong> is just before cURL reads the first byte from the network (it hasn’t actually read it yet). time_starttransfer - time_appconnect is practically the same as Time To First Byte (TTFB) from this client. This includes the round trip over the network, so you might get a better guess of how long the server spent on the request by calculating TTFB - (time_connect - time_namelookup), so in this case, the server spent only a few milliseconds responding, the rest of the time was the network.
     
-    time_total is just after the client has sent the FIN connection tear down.
+    <strong>time_total</strong> is just after the client has sent the FIN connection tear down.
+    
+    
 
 
 5. Использовали два подхода к тестированию:
@@ -32,7 +38,7 @@
          https://github.com/igorgorovoy/se-perf-load-test/blob/master/test-scripts/scenario2_t1.sh
          https://github.com/igorgorovoy/se-perf-load-test/blob/master/test-scripts/scenario2_t2.sh
          
-    Результаты измерений собирались 24 часа и доступны https://github.com/igorgorovoy/se-perf-load-test/tree/master/harvester - файлы AU - это файлы с результатами собранные с австралийского сервера , US - с американского соответственно, в префиксее наименования файла указан какой тип измерения использовалсядля получения данных в данном файле.
+    Результаты измерений собирались <strong>24 часа<.strong> и доступны https://github.com/igorgorovoy/se-perf-load-test/tree/master/harvester - файлы AU - это файлы с результатами собранные с австралийского сервера , US - с американского соответственно, в префиксее наименования файла указан какой тип измерения использовалсядля получения данных в данном файле.
     
     
 
